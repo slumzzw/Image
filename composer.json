@@ -1,0 +1,22 @@
+{
+  "name": "Javion/Image",
+  "description": "图片合成，图片水印处理",
+  "keywords": ["image", "php", "water", "图片水印", "图片合成"],
+  "homepage": "https://github.com/slumzzw/Image",
+  "license": "MIT License",
+  "authors": [
+    {
+      "name": "Javion",
+      "email": "535090976@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4"
+  },
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Javion\\Image\\": "src"
+    }
+  }
+}
