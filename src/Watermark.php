@@ -133,7 +133,7 @@ class Watermark
      * @param int $opacity
      * @param int $posX
      * @param int $posY
-     * @return bool
+     * @return mixed
      */
     public function waterImg($waterImg, $pos, $opacity = 0, $posX = 0, $posY = 0)
     {
@@ -160,7 +160,7 @@ class Watermark
             }
             imagedestroy($imageIm);
 
-            return true;
+            return $this;
         }
 
         return false;
@@ -176,7 +176,7 @@ class Watermark
      * @param int $alpha
      * @param int $posX
      * @param int $posY
-     * @return bool
+     * @return mixed
      */
     public function waterText($text, $pos = 0, $textColor = '', $textSize = 0, $alpha = 0, $posX = 0, $posY = 0)
     {
@@ -206,7 +206,7 @@ class Watermark
             list($x, $y) = $this->getPosData($waterWidth, $waterHeight);
             imagettftext($this->resIm, $this->textSize, 0, $x, $y, $color, $this->font, $this->text);
 
-            return true;
+            return $this;
         }
 
         return false;
@@ -248,5 +248,7 @@ class Watermark
     public function setFont($font)
     {
         $font && $this->font = $font;
+
+        return $this;
     }
 }

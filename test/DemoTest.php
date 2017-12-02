@@ -12,9 +12,7 @@ class DemoTest extends TestCase {
 
         $c = __DIR__ . '/water.png';
 
-        $this->assertTrue($image->waterText('zzwtestd', 8));
-        $this->assertTrue($image->waterImg($c, 2, 50));
-        $this->assertTrue($image->save($b));
+        $this->assertTrue($image->waterText('zzwtestd', 8)->waterImg($c, 2, 50)->save($b));
     }
 }
 
