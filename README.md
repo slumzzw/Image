@@ -123,7 +123,7 @@
     
 ## 5、安装使用
 
-    composer require Javion/Image
+    composer require javion/image
 
 
 
